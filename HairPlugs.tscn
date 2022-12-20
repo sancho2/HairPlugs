@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://HairPlugs.gd" type="Script" id=1]
+[ext_resource path="res://face.png" type="Texture" id=2]
+[ext_resource path="res://hair.png" type="Texture" id=3]
+
+[node name="HairPlugs" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Face" type="Sprite" parent="."]
+position = Vector2( 93, 72 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Hair_pieces" type="Sprite" parent="."]
+position = Vector2( 109, 87 )
+texture = ExtResource( 3 )
+hframes = 2
+vframes = 2
+
+[node name="Button" type="Button" parent="."]
+margin_left = 76.0
+margin_top = 34.0
+margin_right = 142.0
+margin_bottom = 54.0
+text = "Change"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
